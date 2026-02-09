@@ -1,0 +1,34 @@
+body {background-color:#222;}
+#wrap {
+    background-color:#fff; 
+    width:440px; height:956px;
+    margin:0 auto;
+    background-image:url(../flwoer_images/bg1.jpg);
+    background-size:200% auto;
+    background-repeat:no-repeat; /* 화면보다 이미지가 작을때 */
+    background-position:right center;
+    padding:100px 0 0;
+    text-align: center;
+}
+#wrap #title {}
+#wrap #title p {padding-bottom:15px;}
+#wrap #title h1 {padding-bottom:30px;font-size:1.5rem;}
+#wrap #title h1 span {font-weight:600;}
+#wrap #birthday_frm {margin: auto;}
+#wrap #birthday_frm input::placeholder {color: aqua;}
+#wrap #birthday_frm input:focus {border:2px solid magenta;}
+#wrap #birthday_frm > * {}
+#wrap #birthday_frm input {
+    text-align:center;
+    display:block;
+    width:146px;
+    height:42px;
+    margin: auto;
+    margin-bottom:20px;
+    border-radius:37px;
+}
+#wrap #birthday_frm #user_year {}
+#wrap #birthday_frm #user_month {}
+#wrap #birthday_frm #user_day {}
+#wrap #birthday_frm #birthday_btn {background-color: black;color: #fff;width:230px;height:44px;border-radius:15px;}
+#wrap #birthday_frm #birthday_btn:hover {background-color: rgb(52, 225, 184);color: #fff;width:230px;height:44px;border-radius:15px;}
