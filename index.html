@@ -13,19 +13,21 @@
 <body>
     <div id="wrap">
         <header>
-            <a href="#"><img src="./img/imgi_1_1703835696357GyHhY.jpg" alt="오뚜기 웰컴 쿠폰팩&오뚜기프트"></a>
+            <a href="#" id="event_top">오뚜기몰 웰컴 쿠폰팩 <img src="#" alt="쿠폰"> & 오뚜기프트 <img src="#" alt="기프트"></a>
+            </div>
             <div id="header_top">
                 <h1><a href="#"><img src="./img/logo01.png" alt="오뚜기몰"></a></h1>
                 <form action="#" method="get">
-                    <input type="text" placeholder="라면은 역시 오뚜기 라면">
-                    <button type="button" class="serch_btn">
+                    <input type="text" name="search_bar" id="search_bar" placeholder="라면은 역시 오뚜기 라면">
+                    <button type="button" class="search_btn">
                         <img src="./img/icon_search_21.svg" alt="검색">
                     </button>
                 </form>
                 <ul id="user_service">
                     <li><a href="#"><img src="./img/icon_login.svg" alt="로그인">로그인</a></li>
                     <li><a href="#"><img src="./img/icon_my.svg" alt="마이페이지">마이페이지</a></li>
-                    <li><a href="#"><img src="./img/shopping-cart.png" alt="장바구니">장바구니</a></li>
+                    <li><a href="#"><img src="./img/shopping-cart.png" alt="장바구니">장바구니</a>
+                    <span class="cart_count">1</span></li>
                 </ul>
             </div>
             <nav>
@@ -98,24 +100,26 @@
                     <a href="#"><img src="./img/bnr01.png" alt="토스페이로 결제하고 최대 4천원 혜택 받기"></a>
                     <a href="#"><img src="./img/bnr02.png" alt="천일의 기다림의 미학, 죽장연 런칭"></a>
                 </div>
-                <button class="slide_prev"><img src="./img/icon_main_arrow_L.svg" alt="이전"></button>
-                <button class="slide_next"><img src="./img/icon_main_arrow_R.svg" alt="다음"></button>
+                <button type="button" class="slide_prev"><img src="./img/icon_main_arrow_L.svg" alt="이전"></button>
+                <button type="button" class="slide_next"><img src="./img/icon_main_arrow_R.svg" alt="다음"></button>
                 <div class="slide_btn">
-                    <button class="slide_play_stop"><img src="#" alt="재생및멈춤"></button>
+                    <button type="button" class="slide_play_stop"><img src="#" alt="재생및멈춤"></button>
                     <div class="slide_page">
                         <span class="now_page">1</span>
                         <span class="total_page">15</span>
                     </div>
-                    <a href="#"><img src="./img/icon_more.svg" alt="슬라이드 전체보기"></a>
+                    <a href="#" class="total_slide"><img src="./img/icon_more.svg" alt="슬라이드 전체보기"></a>
                 </div>
             </div>
             <!-- 히어로배너 끝 -->
             <div id="floating_btn">
-                <p><a href="#">신제품</a></p>
-                <p><a href="#">이벤트</a></p>
-                <p><a href="#">베스트</a></p>
-                <p><a href="#">최근 본</a></p>
-                <p><a href="#">TOP</a></p>
+                <div id="floating_menu">
+                    <a href="#">신제품</a>
+                    <a href="#">이벤트</a>
+                    <a href="#">베스트</a>
+                </div>
+                <a href="#">최근 본</a>
+                <a href="#">TOP</a>
             </div>
             <!-- 플로팅 버튼 끝 -->
             <ul class="category">
@@ -134,37 +138,33 @@
             <section id="new_taste">
                 <div class="title">
                     <h1>새로움을 맛보세요</h1>
-                    <a href="#" class="view_more"><img src="./img/icon_more.svg" alt="더보기">더보기</a>
+                    <a href="#" class="more"><img src="./img/icon_more.svg" alt="더보기">더보기</a>
                 </div>
                 <ul class="product">
                     <li><!-- 상품 1개 -->
-                        <div class="contents">
-                            <div class="contents_img">
-                                <a href="#"><img src="./img/product01.jpg" alt="열라면 프레첼"></a>
-                                <a href="#"><img src="./img/icon_cart.svg" alt="장바구니"></a>
-                            </div>
+                        <div class="contents_img">
+                            <a href="#"><img src="./img/product01.jpg" alt="열라면 프레첼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
+                        </div>
+                        <a href="#">
                             <div class="contents_info">
-                                <a href="#"><h1>화끈한 매운맛! 바삭한 식감!</h1></a>
-                                <a href="#"><h1>[이달의 신제품 15% 할인] 열라면프레첼 50G</h1></a>
-                            </div>
-                            <div class="price">
-                                <!-- <p><a href="#">할인률</a></p> -->
-                                <p><a href="#"><em>1,780</em>원</a></p>
-                                <!-- <p><a href="#"><del>할인 전 가격</del></a></p> -->
+                                <h1>화끈한 매운맛! 바삭한 식감!</h1>
+                                <h1>[이달의 신제품 15% 할인] 열라면프레첼 50G</h1>
+                                <p><!-- <span>할인률</span> --><em>1,780</em>원<!-- <dle>할인 전 가격</dle> --></p>
                             </div>
                             <ul class="product_tags">
-                                <li><a href="#"><p>실온</p></a></li>
-                                <li><a href="#"><p>NEW</p></a></li>
-                                <li><a href="#"><p>쿠폰</p></a></li>
-                                <li><a href="#"><p>추천</p></a></li>
+                                    <li>실온</li>
+                                    <li>NEW</li>
+                                    <li>쿠폰</li>
+                                    <li>추천</li>
                             </ul>
-                        </div>
+                        </a>
                     </li>
                     <li><!-- 상품 1개 -->
                         <div class="contents">
                             <div class="contents_img">
                                 <a href="#"><img src="./img/imgi_12_1770854892927CFLTf.1iay6pqltru44.jpg" alt="퀵모닝 오믈렛 플레인"></a>
-                                <a href="#"><img src="./img/icon_cart.svg" alt="장바구니"></a>
+                                <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                             </div>
                             <div class="contents_info">
                                 <a href="#"><h1>아침을 간편하게!</h1></a>
@@ -187,7 +187,7 @@
                         <div class="contents">
                             <div class="contents_img">
                                 <a href="#"><img src="./img/imgi_15_1770854975710nGJ31.vb930j7dfz1t.jpg" alt="퀵모닝 오믈렛 토마토 300g"></a>
-                                <a href="#"><img src="./img/icon_cart.svg" alt="장바구니"></a>
+                                <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                             </div>
                             <div class="contents_info">
                                 <a href="#"><h1>부~드럽고 간편한!</h1></a>
@@ -211,7 +211,7 @@
                         <div class="contents">
                             <div class="contents_img">
                                 <a href="#"><img src="./img/product03.jpg" alt="가뿐한끼 닭가슴살"></a>
-                                <a href="#"><img src="#" alt="장바구니"></a>
+                                <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                             </div>
                             <div class="contents_info">
                                 <a href="#"><h1>은은한 불향, 깊은 감칠맛의 정통 바베큐 소스</h1></a>
@@ -238,8 +238,8 @@
                     <a href="#"><img src="./img/imgi_20_1756878162509wzA5C.png" alt="토스페이 특별 할인 혜택"></a>
                     <a href="#"><img src="./img/imgi_19_1763601678035qJ4G4.png" alt="페이코로 결제 시 6.5% 할인"></a>
                 </div>
-                <button class="slide_prev"><img src="./img/icon_main_arrow_L.svg" alt="이전"></button>
-                <button class="slide_next"><img src="./img/icon_main_arrow_R.svg" alt="다음"></button>
+                <button type="button" class="slide_prev"><img src="./img/icon_main_arrow_L.svg" alt="이전"></button>
+                <button type="button" class="slide_next"><img src="./img/icon_main_arrow_R.svg" alt="다음"></button>
             </section>
             <!-- 이벤트 배너 끝 -->
             <section id="repurchase_top">
@@ -251,7 +251,7 @@
                     <li> <!-- 1 -->
                         <div class="contents_img">
                             <a href="#"><img src="./img/product04.jpg" alt="오뚜기짜장"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
+                            <a href="#" class="add_cart"><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
                         </div>
                         <h1>오뚜기 짜장 100G</h1>
                         <div class="price">
@@ -266,7 +266,7 @@
                     <li> <!-- 2 -->
                         <div class="contents_img">
                             <a href="#"><img src="./img/product05.jpg" alt="부침가루"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
                         </div>
                         <h1>부침가루 1kg</h1>
                         <div class="price">
@@ -281,7 +281,7 @@
                     <li> <!-- 3 -->
                         <div class="contents_img">
                             <a href="#"><img src="./img/imgi_26_1743993686899lGt1W.rh7qshdtoy0k.jpg" alt="쌀핫케이크믹스"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
                         </div>
                         <h1>쌀핫케이크믹스 400g</h1>
                         <div class="price">
@@ -296,7 +296,7 @@
                     <li> <!-- 4 -->
                         <div class="contents_img">
                             <a href="#"><img src="./img/imgi_27_17530610130706LvW4.1jeqil6s91nhw.jpg" alt="쌀컵케이크치즈"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
                         </div>
                         <h1>달걀하나톡넣는 쌀컵케이즈 치즈 60g</h1>
                         <div class="price">
@@ -311,7 +311,7 @@
                     <li> <!-- 5 -->
                         <div class="contents_img">
                             <a href="#"><img src="./img/imgi_28_1764562351405jAH7k.vbszor7r8i7m.jpg" alt="쌀컵케이크스윗바나나"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
                         </div>
                         <h1>달걀하나톡넣는 쌀컵케이즈 스윗바나나 60g</h1>
                         <div class="price">
@@ -355,7 +355,7 @@
                                     <p><a href="#"><del>3,900원</del></a></p>
                                 </div>
                             </div>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니담기"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니담기"></a>
                         </li>
                         <li>
                             <a href="#"><img src="./img/imgi_113_1761037305070kalKG.vbceleu7bwa9.jpg" alt="크림컵스프"></a>
@@ -367,7 +367,7 @@
                                     <p><a href="#"><del>3,900원</del></a></p>
                                 </div>
                             </div>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니담기"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니담기"></a>
                         </li>
                     </ul>
                 </div>
@@ -376,13 +376,13 @@
             <section id="only_otoki">
                 <div class="title">
                     <h1>오뚜기몰에서만 만나요</h1>
-                    <a href="#"><img src="./img/icon_more.svg" alt="더보기">더보기</a>
+                    <a href="#" class="more" ><img src="./img/icon_more.svg" alt="더보기">더보기</a>
                 </div>
                 <ul class="contents">
                     <li>
                         <div class="contents_img">
                             <a href="#"><img src="./img/imgi_45_1769756281181vUMqC.to2a8zym66up.jpg" alt="죽장연 오뚜기세트(빠개장500g+고추장500g)"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <div class="product_info">
                             <h1><a href="#">죽장연 오뚜기세트(빠개장500g+고추장500g)</a></h1>
@@ -406,7 +406,7 @@
                     <li>
                         <div class="contents_img">
                             <a href="#"><img src="./img/imgi_46_1770605689829eSo7P.s1dwho4cu90z.jpg" alt="죽장연 프리미엄 고추장 150g 3개"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <div class="product_info">
                             <h1><a href="#">죽장연 프리미엄 고추장 150g 3개</a></h1>
@@ -429,7 +429,7 @@
                     <li>
                         <div class="contents_img">
                             <a href="#"><img src="./img/imgi_47_1770605785740Jpq54.1h7j5abxrcqwo.jpg" alt="죽장연 프리미엄 전통 된장 150g 3개"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <div class="product_info">
                             <h1><a href="#">죽장연 프리미엄 전통 된장 150g 3개</a></h1>
@@ -452,7 +452,7 @@
                     <li>
                         <div class="contents_img">
                             <a href="#"><img src="./img/imgi_47_1770605785740Jpq54.1h7j5abxrcqwo.jpg" alt="죽장연 프리미엄 연세트 (된장1kg+고추장1kg+간장500ml)"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <div class="product_info">
                             <h1><a href="#">죽장연 프리미엄 연세트 (된장1kg+고추장1kg+간장500ml)</a></h1>
@@ -686,7 +686,7 @@
                                         <!-- <p><a href="#"><del>할인 전 가격</del></a></p> -->
                                     </div>
                                 </div>
-                                <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
+                                <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
                             </li>
                             <li>
                                 <form action="#" method="get">
@@ -701,7 +701,7 @@
                                         <!-- <p><a href="#"><del>할인 전 가격</del></a></p> -->
                                     </div>
                                 </div>
-                                <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
+                                <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 담기"></a>
                             </li>
                         </ul>
                     </div>
@@ -712,7 +712,7 @@
                         <p><em>14,560</em>원</p>
                         <div class="snb">
                             <a href="#"><img src="./img/imgi_167_icon_heart_big.svg" alt="관심상품 추가"></a>
-                            <a href="#"><img src="./img/icon_cart_big.svg" alt="장바구니"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart_big.svg" alt="장바구니 추가"></a>
                         </div>
                     </div>
                 </div>
@@ -721,13 +721,13 @@
             <section id="sWeet_home">
                 <div class="title">
                     <h1>스위트홈</h1>
-                    <a href="#"><img src="./img/icon_more.svg" alt="더보기">더보기</a>
+                    <a href="#" class="more" ><img src="./img/icon_more.svg" alt="더보기">더보기</a>
                 </div>
                 <ul class="product">
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_89_17500559927306HO5S.soccessa828y.jpg" alt="스위트홈 앞치마"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 앞치마</h1></a>
                         <div class="price">
@@ -747,7 +747,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_90_1750058008317NNibF.1k1x8qgboyhpv.jpg" alt="스위트홈 옐로우 앙팡팩"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 옐로우 앙팡팩</h1></a>
                         <div class="price">
@@ -767,7 +767,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_91_1750120977325f379M.s4xfat99bvc4.png" alt="스위트홈 플럼프 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 플럼프 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -787,7 +787,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_92_1750119749085BXFcC.qe11j7ludlis.jpg" alt="스위트홈 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -810,13 +810,13 @@
             <section id="goods">
                 <div class="title">
                     <h1>굿즈</h1>
-                    <a href="#"><img src="./img/icon_more.svg" alt="더보기">더보기</a>
+                    <a href="#" class="more" ><img src="./img/icon_more.svg" alt="더보기">더보기</a>
                 </div>
                 <ul class="product">
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_93_1749113009048Mc9QD.qhnc4014o6zl.jpg" alt="스위트홈 앞치마"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 앞치마</h1></a>
                         <div class="price">
@@ -836,7 +836,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_94_1693445760044JzdoH.1iexr3wqx7c50.webp" alt="스위트홈 옐로우 앙팡팩"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 옐로우 앙팡팩</h1></a>
                         <div class="price">
@@ -856,7 +856,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_95_1742433582230X8TsQ.sl9hw3fmawqh.jpg" alt="스위트홈 플럼프 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 플럼프 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -876,7 +876,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_96_17424292175228ygph.ubonk7hvd6if.jpg" alt="스위트홈 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -899,13 +899,13 @@
             <section id="one_plus_one">
                 <div class="title">
                     <h1>원쁠원으로 만나요</h1>
-                    <a href="#"><img src="./img/icon_more.svg" alt="더보기">더보기</a>
+                    <a href="#" class="more" ><img src="./img/icon_more.svg" alt="더보기">더보기</a>
                 </div>
                 <ul class="product">
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_97_1770283666906YzIMk.sohuuxi1g5dj.jpg" alt="스위트홈 앞치마"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 앞치마</h1></a>
                         <div class="price">
@@ -925,7 +925,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_98_1770358109795AdAAs.u8dg0lijg1uq.jpg" alt="스위트홈 옐로우 앙팡팩"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 옐로우 앙팡팩</h1></a>
                         <div class="price">
@@ -945,7 +945,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_99_1770359588053gkeiK.1ibeaywpvzeck.jpg" alt="스위트홈 플럼프 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 플럼프 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -965,7 +965,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_100_1770368091479gOHJ4.qhqlhws10iuc.jpg" alt="스위트홈 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -988,13 +988,13 @@
             <section id="my_choice">
                 <div class="title">
                     <h1>나를 위한 오늘의 선택</h1>
-                    <a href="#"><img src="./img/icon_more.svg" alt="더보기">더보기</a>
+                    <a href="#" class="more" ><img src="./img/icon_more.svg" alt="더보기">더보기</a>
                 </div>
                 <ul class="product">
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_101_1770596707775uT34f.1h7x0xz78pwl3.jpg" alt="스위트홈 앞치마"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 앞치마</h1></a>
                         <div class="price">
@@ -1014,7 +1014,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_102_1769999420471LK9RJ.tnzjmvme88yp.jpg" alt="스위트홈 옐로우 앙팡팩"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 옐로우 앙팡팩</h1></a>
                         <div class="price">
@@ -1034,7 +1034,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_103_1766995427569psTnh.1jy4yyecj8y0n.jpg" alt="스위트홈 플럼프 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 플럼프 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -1054,7 +1054,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_104_1770606799776nPktT.r1cvye58j3uc.jpg" alt="스위트홈 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -1077,13 +1077,13 @@
             <section id="china_dish">
                 <div class="title">
                     <h1>중식 풀코스 한상</h1>
-                    <a href="#"><img src="./img/icon_more.svg" alt="더보기">더보기</a>
+                    <a href="#" class="more" ><img src="./img/icon_more.svg" alt="더보기">더보기</a>
                 </div>
                 <ul class="product">
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_106_1768529972293pHdqq.1ibh16vzsw75g.jpg" alt="스위트홈 앞치마"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 앞치마</h1></a>
                         <div class="price">
@@ -1103,7 +1103,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_107_1759299864618ZEqpt.vf0wonaxki1u.jpg" alt="스위트홈 옐로우 앙팡팩"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 옐로우 앙팡팩</h1></a>
                         <div class="price">
@@ -1123,7 +1123,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_108_1731636059840E4GFQ.s103n95gumw2.jpg" alt="스위트홈 플럼프 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 플럼프 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -1143,7 +1143,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_109_1718083773142y7XlD.trqsbh5m96pl.webp" alt="스위트홈 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -1166,13 +1166,13 @@
             <section id="no_flour">
                 <div class="title">
                     <h1>밀가루 없어도 맛있는 비밀의 맛</h1>
-                    <a href="#"><img src="./img/icon_more.svg" alt="더보기">더보기</a>
+                    <a href="#" class="more" ><img src="./img/icon_more.svg" alt="더보기">더보기</a>
                 </div>
                 <ul class="product">
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_110_1764559326903O0MQF.sof3sp32g2t5.jpg" alt="스위트홈 앞치마"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 앞치마</h1></a>
                         <div class="price">
@@ -1192,7 +1192,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_111_1759298049009pPi9y.s1dwkkmpwin7.jpg" alt="스위트홈 옐로우 앙팡팩"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 옐로우 앙팡팩</h1></a>
                         <div class="price">
@@ -1212,7 +1212,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/imgi_113_1761037305070kalKG.vbceleu7bwa9.jpg" alt="스위트홈 플럼프 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 플럼프 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -1232,7 +1232,7 @@
                     <li>
                         <div class="img">
                             <a href="#"><img src="./img/product02.jpg" alt="스위트홈 파우치 XS/S/M"></a>
-                            <a href="#"><img src="./img/icon_cart.svg" alt="장바구니 버튼"></a>
+                            <a href="#" class="add_cart" ><img src="./img/icon_cart.svg" alt="장바구니 추가"></a>
                         </div>
                         <a href="#"><h1>스위트홈 파우치 XS/S/M</h1></a>
                         <div class="price">
@@ -1275,14 +1275,14 @@
                     구매안전 (에스크로) 서비스를 이용하실 수 있습니다. <a href="#">서비스 가입사실 확인</a></dd>
                     <dd><img src="./img/icon_nice.png" alt="NICE 구매안전서비스"></dd>
                 </dl>
-                <div id="copyright">
+                <div class="copyright">
                     <p>copyright &copy; ottogimail.co.kr </p>
                     <a><img src="./img/icon_company.png" alt="오뚜기"></a>
                     <a><img src="./img/imgi_116_icon_okitchen.svg" alt="오키친"></a>
                     <a><img src="./img/imgi_117_icon_obalance.svg" alt="오밸런스"></a>
                 </div>
             </div>
-            <dl>
+            <dl id="cs_center">
                 <dt>고객센터</dt>
                 <dd><em>080-433-8888</em></dd>
                 <dd>월~금 09:00 ~ 17:00</dd>
